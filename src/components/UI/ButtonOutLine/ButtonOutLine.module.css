@@ -1,0 +1,11 @@
+.button-outlet-yellow{
+    border: 1px solid #F4FA1A;
+    border-radius: 15px !important;
+    width: 275px;
+    height: 66px;
+    background-color: transparent;
+    font-family: 'Roboto Slab' !important;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px !important;
+}
