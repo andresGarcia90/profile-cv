@@ -1,0 +1,11 @@
+.subtitle {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 63px;
+}
+
+.subtitle-underline {
+    border-bottom: 3px solid #F4FA1A;
+    padding: 0px;
+    width: 90px !important;
+}
