@@ -6,16 +6,14 @@ import Col from "react-bootstrap/Col";
 import ChartBarFlat from "../UI/ChartBarFlat/ChartBarFlat";
 
 const SkillsPage = () => {
-
-    
-    const skills = [
-        {description: 'HTML', percentage: 90},
-        {description: 'CSS', percentage: 80},
-        {description: 'JavaScript', percentage: 40},
-        {description: 'PHP', percentage: 50},
-        {description: 'Python', percentage: 10},
-        {description: 'Mysql', percentage: 50}
-    ];
+  const skills = [
+    { id: 1, description: "HTML", percentage: 90 },
+    { id: 2, description: "CSS", percentage: 80 },
+    { id: 3, description: "JavaScript", percentage: 40 },
+    { id: 4, description: "PHP", percentage: 50 },
+    { id: 5, description: "Python", percentage: 10 },
+    { id: 6, description: "Mysql", percentage: 50 },
+  ];
 
   return (
     <Container>
@@ -34,11 +32,17 @@ const SkillsPage = () => {
           </p>
         </Col>
         <Col>
-            <ul>
-                {
-                    skills.map(skill => <ChartBarFlat percentage={skill.percentage} description={skill.description}>{skill.description}</ChartBarFlat>)
-                }
-            </ul>
+          <ul>
+            {skills.map((skill) => (
+              <ChartBarFlat
+                key={skill.id}
+                percentage={skill.percentage}
+                description={skill.description}
+              >
+                {skill.description}
+              </ChartBarFlat>
+            ))}
+          </ul>
         </Col>
       </Row>
     </Container>
