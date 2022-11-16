@@ -6,7 +6,7 @@ import Subtitle from "../UI/Subtitle/Subtitle";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-const ContactPage = () => {
+const ContactPage = React.forwardRef((props, ref) => {
 
   const [validated, setValidated] = useState(false);
 
@@ -22,7 +22,7 @@ const ContactPage = () => {
   };
 
   return (
-    <Container>
+    <Container ref={ref}>
       <Row className="justify-content-md-center">
         <Subtitle text="Contact Me"></Subtitle>
       </Row>
@@ -75,6 +75,6 @@ const ContactPage = () => {
       </Row>
     </Container>
   );
-};
+});
 
 export default ContactPage;

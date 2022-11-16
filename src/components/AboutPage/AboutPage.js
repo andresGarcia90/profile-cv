@@ -5,15 +5,16 @@ import Col from "react-bootstrap/Col";
 import Subtitle from "../UI/Subtitle/Subtitle";
 import './AboutPage.css'
 import ButtonFullFilled from "../UI/ButtonFullFilled/ButtonFullFilled";
+import profileImage from "../../assets/img/profile-image.png";
 
-const AboutPage = () => {
+const AboutPage = React.forwardRef((props, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <Row className="justify-content-md-center">
         <Subtitle></Subtitle>
       </Row>
       <Row>
-        <Col sm={4}>Photo</Col>
+        <Col sm={4}><img className="profile-image" src={profileImage} alt="profile image"/></Col>
         <Col sm={8}>
             <Row className="who-i-am">Who I Am?</Row>
             <Row>
@@ -33,6 +34,6 @@ const AboutPage = () => {
       </Row>
     </Container>
   );
-};
+});
 
 export default AboutPage;

@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ChartBarFlat from "../UI/ChartBarFlat/ChartBarFlat";
 
-const SkillsPage = () => {
+const SkillsPage = React.forwardRef((props, ref) => {
   const skills = [
     { id: 1, description: "HTML", percentage: 90 },
     { id: 2, description: "CSS", percentage: 80 },
@@ -16,7 +16,7 @@ const SkillsPage = () => {
   ];
 
   return (
-    <Container>
+    <Container ref={ref}>
       <Row className="justify-content-md-center">
         <Subtitle text="My Skills"></Subtitle>
       </Row>
@@ -47,6 +47,6 @@ const SkillsPage = () => {
       </Row>
     </Container>
   );
-};
+});
 
 export default SkillsPage;
