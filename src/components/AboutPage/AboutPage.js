@@ -14,7 +14,7 @@ const AboutPage = React.forwardRef((props, ref) => {
         <Subtitle></Subtitle>
       </Row>
       <Row>
-        <Col sm={4}><img className="profile-image" src={profileImage} alt="profile image"/></Col>
+        <Col sm={4}><img className="profile-image" src={profileImage} alt="profile"/></Col>
         <Col sm={8}>
             <Row className="who-i-am">Who I Am?</Row>
             <Row>
